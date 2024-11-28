@@ -1,6 +1,7 @@
 package easymails
 
 import (
+	"fmt"
 	"log"
 
 	"gopkg.in/gomail.v2"
@@ -23,4 +24,5 @@ func SendMail(senderMail, emailPassword, receivermail, subject, body string) err
 		log.Fatal(err)
 	}
 	return d.DialAndSend(m)
+	fmt.Println("Mail successfully sent")
 }
